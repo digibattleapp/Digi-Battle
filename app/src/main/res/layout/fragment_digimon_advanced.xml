@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/message_input_layout"
+                  android:orientation="vertical"
+    />
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+    >
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send msg"
+                android:id="@+id/send_custom_msg_button"
+        />
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reply msg"
+                android:id="@+id/reply_custom_msg_button"
+        />
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:id="@+id/clear_screen_button"
+        />
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ping"
+                android:id="@+id/ping_button"
+        />
+    </LinearLayout>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/advanced_stop_btn"
+    />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/advance_status"
+    />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="@dimen/waveform_width"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="@dimen/waveform_width"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/waveform_linear_layout">
+                <com.digibattle.app.view.WaveformView
+                    android:layout_width="@dimen/waveform_width"
+                    android:layout_height="@dimen/waveform_height"
+                    android:id="@+id/raw_analog_signal"
+                />
+            </LinearLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+</LinearLayout>

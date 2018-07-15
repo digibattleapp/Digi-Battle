@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="waveform_width">700dip</dimen>
+    <dimen name="waveform_height">300dip</dimen>
+</resources>

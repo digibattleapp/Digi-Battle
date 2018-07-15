@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/player_name_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player name (optional): "/>
+            <EditText
+                android:id="@+id/player_id_1"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/player_id_2"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/player_id_3"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/player_id_4"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monster 1 id: "/>
+            <EditText
+                android:id="@+id/monster_1_id"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monster 2 id: "/>
+            <EditText
+                android:id="@+id/monster_2_id"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monster 1 power: "/>
+            <EditText
+                android:id="@+id/monster_1_power"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monster 2 power: "/>
+            <EditText
+                android:id="@+id/monster_2_power"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+        <CheckBox android:id="@+id/computer_wins_checkbox"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Computer wins"/>
+        <CheckBox android:id="@+id/battle_2v2_checkbox"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="2v2 battle"/>
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send battle"/>
+            <Button
+                android:id="@+id/reply_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reply battle"/>
+            <Button
+                android:id="@+id/reply_without_battle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reply no battle"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/send_copy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send copy"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My signals output: "/>
+            <TextView
+                android:id="@+id/my_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Received signals: "/>
+            <TextView
+                android:id="@+id/received_signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/opposite_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button android:id="@+id/show_hide_advance_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show / Hide Advanced"
+        />
+        <LinearLayout android:id="@+id/advance_screen_layout"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:visibility="gone">
+            <fragment android:id="@+id/advance_screen_fragment"
+                      android:name="com.digibattle.app.fragment.AdvancedScreen"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

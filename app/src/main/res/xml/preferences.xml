@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Expected RTT"
+                        android:key="expected_rtt"
+                        android:summary="Run PING to get RTT or leave it as 0 or 30 if you don't know"
+                        android:defaultValue="30"/>
+    <EditTextPreference android:title="Voltage change threshold"
+                        android:key="voltage_change_threshold"
+                        android:defaultValue="10000"/>
+    <EditTextPreference android:title="Analog init ratio"
+                        android:key="analog_init_ratio"
+                        android:defaultValue="0.7"/>
+    <EditTextPreference android:title="Analog delta"
+                        android:key="analog_delta"
+                        android:defaultValue="50"/>
+</PreferenceScreen>
